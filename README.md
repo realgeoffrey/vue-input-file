@@ -28,8 +28,8 @@
         import vueInputFile from 'vue-input-file'
 
         // 全局注册
-        Vue.use(vueInputFile, { component: 'VueInputFile' }) // 组件名默认是：vue-input-file
-        // 或：Vue.component('VueInputFile', vueInputFile)
+        Vue.use(vueInputFile, { component: 'InputFile' }) // 组件名默认是：vue-input-file
+        // 或：Vue.component('InputFile', vueInputFile)
         ```
     2. 局部注册
 
@@ -39,7 +39,7 @@
         export default {
           components: {
             // 局部注册
-            VueInputFile: vueInputFile
+            InputFile: vueInputFile
           }
         }
         ```
@@ -77,8 +77,8 @@
 1. 参数
 
     ```vue
-    <VueInputFile
-      accept="input的accept属性"
+    <InputFile
+      accept="input的accept属性（''）"
       :max-size="文件大小上限-M（0，无上限）"
       allow-blob-url="是否输出Blob URL（true）"
       allow-base64="是否输出base64（true）"
@@ -89,12 +89,12 @@
 2. 插槽
 
     ```vue
-    <VueInputFile
+    <InputFile
       v-slot="fileData"
     >
       文件-><br>
       {{ fileData.file && fileData.file.name }}<br>
       {{ fileData.blobUrl }}<br>
       {{ fileData.base64 }}
-    </VueInputFile>
+    </InputFile>
     ```
