@@ -83,9 +83,11 @@
       allow-blob-url="是否输出Blob URL（true）"
       allow-base64="是否输出base64（true）"
       @error="文件大小超过上限回调的方法，带参数{ msg }"
-      @update="input的change事件后改变了file的回调的方法，带参数{ file, blobUrl, base64 }"
+      @update="input提交文件成功后回调的方法，带参数{ file, blobUrl, base64 }"
     />
     ```
+
+    >Tips：事件`update`会在提交完成后执行，就算与上一次提交相同文件也会再次执行；用户取消提交、文件大小超过上限终止提交（`error`触发）都不会触发`update`。
 2. 插槽
 
     ```vue

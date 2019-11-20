@@ -74,10 +74,10 @@ export default {
         } else {
           target.value = ''
           this.$emit('error', { msg: `上传文件过大（≈${(file.size / RATE).toFixed(1)}M），请上传${this.maxSize}M以下的图片` })
-          this.update()
+          // this.update()
         }
       } else {
-        this.update()
+        // this.update()
       }
     },
     handleReaderLoad (e) {
@@ -95,6 +95,8 @@ export default {
       this.base64 = base64
 
       this.$emit('update', { file, blobUrl, base64 })
+
+      this.$refs.inputDom.value = ''
     },
     destroyReader () {
       this.reader.abort()
