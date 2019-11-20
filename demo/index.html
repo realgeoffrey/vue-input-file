@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>demo for vue-uploadfile</title>
+  <style>
+    img[src=""],
+    img:not([src]),
+    video[src=""],
+    video:not([src]) {
+      visibility: hidden;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    图片（accept="image/*"）：
+    <vue-uploadfile
+      :max-size="1"
+      @error="error1"
+      @update="update1"
+      accept="image/*"
+    >
+    </vue-uploadfile>
+    <br>
+    <img :src="src1.blobUrl" alt="上传图片预览(blobUrl)" height="250">
+    <img :src="src1.base64" alt="上传图片预览(base64)" height="250">
+
+    <hr>
+
+    视频（accept="video/*"）：
+    <vue-uploadfile
+      :allow-base64="false"
+      @update="update2"
+      accept="video/*"
+    >
+    </vue-uploadfile>
+    <br>
+    <video :src="src2.blobUrl" controls="controls" height="250"></video>
+
+    <hr>
+
+    <vue-uploadfile
+      v-slot="fileData"
+    >
+      文件-><br>
+      {{ fileData.file && fileData.file.name }}<br>
+      {{ fileData.blobUrl }}<br>
+      {{ fileData.base64 }}
+    </vue-uploadfile>
+
+  </div>
+
+  <script src="//unpkg.com/vue"></script>
+  <!--  <script src="//unpkg.com/vue-uploadfile"></script>-->
+  <script src="/dist/vue-uploadfile.iife.js"></script>
+
+  <script>
+  // 全局注册
+  // Vue.use(vueUploadfile, { component: 'vue-uploadfile' })
+  // 或：
+  // Vue.component('vue-uploadfile', vueUploadfile)
+
+  new Vue({
+    components: {
+      // 局部注册
+      'vue-uploadfile': vueUploadfile
+    },
+    el: '#app',
+    data () {
+      return {
+        src1: {
+          file: '',
+          blobUrl: '',
+          base64: ''
+        },
+        src2: {
+          file: '',
+          blobUrl: '',
+          base64: ''
+        }
+      }
+    },
+    methods: {
+      error1 (data) {
+        console.error('error1', data)
+      },
+      update1 (data) {
+        console.info('update1', data)
+        this.src1 = data
+      },
+      update2 (data) {
+        console.info('update2', data)
+        this.src2 = data
+      }
+    }
+  })
+  </script>
+</body>
+</html>

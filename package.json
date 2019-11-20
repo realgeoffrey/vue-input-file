@@ -1,0 +1,39 @@
+{
+  "name": "vue-uploadfile",
+  "description": "上传文件、本地展示（Vue组件）",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:realgeoffrey/vue-uploadfile.git"
+  },
+  "keywords": [
+    "vue",
+    "uploader",
+    "vue-uploader"
+  ],
+  "author": "realgeoffrey",
+  "license": "MIT",
+  "homepage": "https://github.com/realgeoffrey/vue-uploadfile#readme",
+  "bugs": {
+    "url": "https://github.com/realgeoffrey/vue-uploadfile/issues"
+  },
+  "main": "dist/vue-uploadfile.cjs.js",
+  "module": "dist/vue-uploadfile.esm.js",
+  "unpkg": "dist/vue-uploadfile.iife.js",
+  "jsdelivr": "dist/vue-uploadfile.iife.js",
+  "scripts": {
+    "build": "rollup --config ./build/rollup.config.js "
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.7.2",
+    "@babel/preset-env": "^7.7.1",
+    "babelrc-rollup": "^3.0.0",
+    "rollup": "^1.27.2",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-terser": "^5.1.2",
+    "rollup-plugin-vue": "5.0.1",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "version": "1.0.0"
+}
