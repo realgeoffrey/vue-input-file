@@ -26,22 +26,22 @@ export default [
     ...config,
     output: {
       format: 'cjs',  // CommonJS
-      file: 'dist/vue-uploadfile.cjs.js'
+      file: 'dist/vue-input-file.cjs.js'
     }
   },
   {
     ...config,
     output: {
       format: 'esm',  // ES6 module
-      file: 'dist/vue-uploadfile.esm.js'
+      file: 'dist/vue-input-file.esm.js'
     }
   },
   {
     ...config,
     output: {
       format: 'iife', // <script>引用
-      file: 'dist/vue-uploadfile.iife.js',
-      name: 'vueUploadfile'
+      file: 'dist/vue-input-file.iife.js',
+      name: 'vueInputFile'
     }
   }
 ]

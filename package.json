@@ -1,25 +1,25 @@
 {
-  "name": "vue-uploadfile",
+  "name": "vue-input-file",
   "description": "上传文件、本地展示（Vue组件）",
   "repository": {
     "type": "git",
-    "url": "git@github.com:realgeoffrey/vue-uploadfile.git"
+    "url": "git@github.com:realgeoffrey/vue-input-file.git"
   },
   "keywords": [
     "vue",
-    "uploader",
-    "vue-uploader"
+    "input-file",
+    "upload-file"
   ],
   "author": "realgeoffrey",
   "license": "MIT",
-  "homepage": "https://github.com/realgeoffrey/vue-uploadfile#readme",
+  "homepage": "https://github.com/realgeoffrey/vue-input-file#readme",
   "bugs": {
-    "url": "https://github.com/realgeoffrey/vue-uploadfile/issues"
+    "url": "https://github.com/realgeoffrey/vue-input-file/issues"
   },
-  "main": "dist/vue-uploadfile.cjs.js",
-  "module": "dist/vue-uploadfile.esm.js",
-  "unpkg": "dist/vue-uploadfile.iife.js",
-  "jsdelivr": "dist/vue-uploadfile.iife.js",
+  "main": "dist/vue-input-file.cjs.js",
+  "module": "dist/vue-input-file.esm.js",
+  "unpkg": "dist/vue-input-file.iife.js",
+  "jsdelivr": "dist/vue-input-file.iife.js",
   "scripts": {
     "build": "rollup --config ./build/rollup.config.js "
   },

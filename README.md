@@ -1,21 +1,21 @@
-# vue-uploadfile
+# vue-input-file
 
 上传文件、本地展示（Vue组件）
 
-1. npm：<https://www.npmjs.com/package/vue-uploadfile>
-2. demo：<https://realgeoffrey.github.io/vue-uploadfile/demo/index.html>
+1. npm：<https://www.npmjs.com/package/vue-input-file>
+2. demo：<https://realgeoffrey.github.io/vue-input-file/demo/index.html>
 
 ### 安装
 1. Node.js安装
 
     ```bash
-    npm install vue-uploadfile --save
+    npm install vue-input-file --save
     ```
 2. 浏览器引用
 
     ```html
     <!-- 需要先引入vue：<script src="//unpkg.com/vue"></script> -->
-    <script src="//unpkg.com/vue-uploadfile"></script>
+    <script src="//unpkg.com/vue-input-file"></script>
     ```
 
 ### 注册组件
@@ -25,21 +25,21 @@
 
         ```javascript
         import Vue from 'vue'
-        import vueUploadfile from 'vue-uploadfile'
+        import vueInputFile from 'vue-input-file'
 
         // 全局注册
-        Vue.use(vueUploadfile, { component: 'VueUploadfile' }) // 组件名默认是：vue-uploadfile
-        // 或：Vue.component('VueUploadfile', vueUploadfile)
+        Vue.use(vueInputFile, { component: 'VueInputFile' }) // 组件名默认是：vue-input-file
+        // 或：Vue.component('VueInputFile', vueInputFile)
         ```
     2. 局部注册
 
         ```javascript
-        import vueUploadfile from 'vue-uploadfile'
+        import vueInputFile from 'vue-input-file'
 
         export default {
           components: {
             // 局部注册
-            VueUploadfile: vueUploadfile
+            VueInputFile: vueInputFile
           }
         }
         ```
@@ -49,25 +49,25 @@
 
         ```html
         <!-- 需要先引入vue：<script src="//unpkg.com/vue"></script> -->
-        <!-- 需要先引入vue-uploadfile：<script src="//unpkg.com/vue-uploadfile"></script> -->
+        <!-- 需要先引入vue-input-file：<script src="//unpkg.com/vue-input-file"></script> -->
 
         <script>
         // 全局注册
-        Vue.use(vueUploadfile, { component: 'vue-uploadfile' }) // 组件名默认是：vue-uploadfile
-        // 或：Vue.component('vue-uploadfile', vueUploadfile)
+        Vue.use(vueInputFile, { component: 'vue-input-file' }) // 组件名默认是：vue-input-file
+        // 或：Vue.component('vue-input-file', vueInputFile)
         </script>
         ```
     2. 局部注册
 
         ```html
         <!-- 需要先引入vue：<script src="//unpkg.com/vue"></script> -->
-        <!-- 需要先引入vue-uploadfile：<script src="//unpkg.com/vue-uploadfile"></script> -->
+        <!-- 需要先引入vue-input-file：<script src="//unpkg.com/vue-input-file"></script> -->
 
         <script>
         new Vue({
           components: {
             // 局部注册
-            'vue-uploadfile': vueUploadfile
+            'vue-input-file': vueInputFile
           }
         })
         </script>
@@ -77,7 +77,7 @@
 1. 参数
 
     ```vue
-    <VueUploadfile
+    <VueInputFile
       accept="input的accept属性"
       :max-size="文件大小上限-M（0，无上限）"
       allow-blob-url="是否输出Blob URL（true）"
@@ -89,12 +89,12 @@
 2. 插槽
 
     ```vue
-    <VueUploadfile
+    <VueInputFile
       v-slot="fileData"
     >
       文件-><br>
       {{ fileData.file && fileData.file.name }}<br>
       {{ fileData.blobUrl }}<br>
       {{ fileData.base64 }}
-    </VueUploadfile>
+    </VueInputFile>
     ```

@@ -1,7 +1,7 @@
-import vueUploadfile from './vue-uploadfile.vue'
+import vueInputFile from './vue-input-file.vue'
 
-vueUploadfile.install = (Vue, options = {}) => {
-  Vue.component(options.component || 'vue-uploadfile', vueUploadfile)
+vueInputFile.install = (Vue, options = {}) => {
+  Vue.component(options.component || 'vue-input-file', vueInputFile)
 }
 
-export default vueUploadfile
+export default vueInputFile
