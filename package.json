@@ -1,6 +1,6 @@
 {
   "name": "vue-input-file",
-  "description": "上传文件、本地展示（Vue组件）",
+  "description": "上传文件、本地展示（Vue@2组件）",
   "repository": {
     "type": "git",
     "url": "git@github.com:realgeoffrey/vue-input-file.git"
@@ -35,5 +35,5 @@
     "rollup-plugin-vue": "5.0.1",
     "vue-template-compiler": "^2.6.10"
   },
-  "version": "1.0.2"
+  "version": "1.0.3"
 }

@@ -1,6 +1,6 @@
 # vue-input-file
 
-上传文件、本地展示（Vue组件）
+上传文件、本地展示（Vue@2组件）
 
 1. npm：<https://www.npmjs.com/package/vue-input-file>
 2. demo：<https://realgeoffrey.github.io/vue-input-file/demo/index.html>
@@ -14,7 +14,7 @@
 2. 浏览器引用
 
     ```html
-    <!-- 需要先引入vue：<script src="//unpkg.com/vue"></script> -->
+    <!-- 需要先引入vue：<script src="//unpkg.com/vue@2"></script> -->
     <script src="//unpkg.com/vue-input-file"></script>
     ```
 
@@ -48,7 +48,7 @@
     1. 全局注册
 
         ```html
-        <!-- 需要先引入vue：<script src="//unpkg.com/vue"></script> -->
+        <!-- 需要先引入vue：<script src="//unpkg.com/vue@2"></script> -->
         <!-- 需要先引入vue-input-file：<script src="//unpkg.com/vue-input-file"></script> -->
 
         <script>
@@ -60,7 +60,7 @@
     2. 局部注册
 
         ```html
-        <!-- 需要先引入vue：<script src="//unpkg.com/vue"></script> -->
+        <!-- 需要先引入vue：<script src="//unpkg.com/vue@2"></script> -->
         <!-- 需要先引入vue-input-file：<script src="//unpkg.com/vue-input-file"></script> -->
 
         <script>
