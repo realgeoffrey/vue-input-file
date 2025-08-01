@@ -1,9 +1,11 @@
 # vue-input-file
 
+[![NPM Version](https://img.shields.io/npm/v/vue-input-file)](https://www.npmjs.com/package/vue-input-file)
+![Vue 2](https://img.shields.io/badge/Vue_2-42b883)
+
 上传文件、本地展示（Vue@2组件）
 
-1. npm：<https://www.npmjs.com/package/vue-input-file>
-2. demo：<https://realgeoffrey.github.io/vue-input-file/demo/index.html>
+demo：<https://realgeoffrey.github.io/vue-input-file/demo/index.html>
 
 ### 安装
 1. Node.js安装
